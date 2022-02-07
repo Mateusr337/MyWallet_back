@@ -2,6 +2,7 @@
 
 ## About 
 
+Backend application of a financial control app.
 - frontend in https://github.com/Mateusr337/MyWallet_Front
 
 ## Techonologies
