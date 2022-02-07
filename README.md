@@ -1,4 +1,4 @@
-# MyWallet
+# My Wallet
 
 ## About 
 
