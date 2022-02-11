@@ -1,21 +1,15 @@
 import express, { json } from 'express';
 import cors from 'cors';
-import { signIn, signUp } from './controllers/authControllers.js';
-import { deleteOperation, getOneOperation, getOperations, postOperation, putOperation } from './controllers/operationControllers.js';
-
+import router from './routes/index.js';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const server = express();
 server.use(cors());
 server.use(json());
 
+server.use(router);
 
-
-server.post('/sign-up', signUp);
-server.post('/sign-in', signIn);
-server.get('/operations/:idUser', getOperations);
-server.post('/operation', postOperation);
-server.delete('/operation/:id', deleteOperation);
-server.get('/operation/:idOperation', getOneOperation);
-server.put('/operation/:idOperation', putOperation);
-
-server.listen(5000);
+server.listen(process.env.PORT, () => {
+    console.log(`listen to port ${process.env.PORT}`);
+});

@@ -1,28 +1,10 @@
 import db from "../db.js";
-import joi from 'joi';
 import bcrypt from 'bcrypt';
 import { v4 as uuid } from 'uuid';
 
 
-const signInSchema = joi.object({
-    email: joi.string().email().required(),
-    password: joi.required()
-});
-
-const signUpSchema = joi.object({
-    name: joi.string().required(),
-    email: joi.string().email().required(),
-    password: joi.required()
-});
-
-
 export async function signUp(req, res) {
     const user = req.body;
-    const validate = signUpSchema.validate(user);
-    if (validate.error) {
-        res.status(422).send('Dados inválidos');
-        return;
-    }
 
     const userFinded = await db.collection('users').findOne({ email: user.email });
     if (userFinded) {
@@ -38,11 +20,7 @@ export async function signUp(req, res) {
 
 export async function signIn(req, res) {
     const user = req.body;
-    const validation = signInSchema.validate(user);
-    if (validation.error) {
-        res.status(422).send('Dados inválidos');
-        return;
-    }
+
     const userFinded = await db.collection('users').findOne({ email: user.email });
 
     if (!userFinded) {
