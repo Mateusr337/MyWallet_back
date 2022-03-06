@@ -18,5 +18,5 @@ Backend application of a financial control app.
 ## How to run
 
 - Firt clone this repository
-- run ```ǹpm i ```
+- run ```npm i ```
 - run ``` node src/index.js ```
