@@ -15,6 +15,7 @@ Backend application of a financial control app.
   <img style='margin: 5px;' src="https://img.shields.io/badge/cors%20-%2320232a.svg?&style=for-the-badge&color=000000&logo=cors&logoColor=ffffff"/>
   <img style='margin: 5px;' src="https://img.shields.io/badge/joi%20-%2320232a.svg?&style=for-the-badge&color=000000&logo=joi&logoColor=ffffff"/>
   <img style='margin: 5px;' src="https://img.shields.io/badge/uuid%20-%2320232a.svg?&style=for-the-badge&color=000000&logo=uuid&logoColor=ffffff"/>
+    <img style='margin: 5px;' src="https://img.shields.io/badge/Heroku%20-%2320232a.svg?&style=for-the-badge&color=430098&logo=Heroku&logoColor=ffffff"/>
 </div>
 
 ## How to run
